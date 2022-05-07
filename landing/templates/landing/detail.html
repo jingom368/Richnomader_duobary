@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="detail.css"> -->
+    <title>Read-book</title>
+</head>
+<body>
+    <main>
+    <!-- <img class="image" src="image.png"> -->
+    
+    <section class="container">
+        <div class="title semibold">
+            남들보다 빠르게
+        </br>
+            서비스 런칭 알림 받기
+        </div>
+
+        <form action="/landing/detail/" method="post">
+            {% csrf_token %}
+            <input id="phonenumber" name="phonenumber" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;(필수) 전화번호" autocomplete="off" maxlength="13" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="000-0000-0000">
+            <!-- <select id="career_years" name="career_years" required>
+                <option value>&nbsp;&nbsp;&nbsp;(필수) 연차</option>
+                <option value="1년차 미만">1년차 미만</option>
+                <option value="1~3년차">1~3년차</option>
+                <option value="3~5년차">3~5년차</option>
+                <option value="5~7년차">5~7년차</option>
+                <option value="7~10년차">7~10년차</option>
+            </select> -->
+            <!-- <select id="choice_book" name="choice_book"> 
+                <option value>&nbsp;&nbsp;&nbsp;(선택) 도서 선택</option>
+            </select> -->
+            <h2 class="notice">
+                참여하고 싶은 서적이 있다면 알려주세요~!</br>
+                스터디를 만들어드려요!
+            </h2>
+            <div class="textarea-read">
+            <textarea id="read_book" name="read_book" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;도서명 + 저자"></textarea>
+            </div>
+            <h5 class="notice_2">*수집된 정보는 서비스 런칭시 알림 용도로만 사용됩니다.</h5>
+            <button id="submit" type="submit">사전 신청하기</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
