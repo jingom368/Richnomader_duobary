@@ -55,9 +55,7 @@ ROOT_URLCONF = 'richnomader_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            "./base_templates"
-        ],
+        'DIRS': [ "./base_templates" ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
