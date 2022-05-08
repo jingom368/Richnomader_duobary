@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/landing/create/" id="create" method="post">
+    <form action="/landing/create/" id="create" method="post" enctype="multipart/form-data">
         {% csrf_token %}
 		Title: <input type="text" name="title" value="Title">
+        <div>
+            Head Image: <input type="file" name="image"/>
+        </div>
 		<input type="submit">
     </form>
     <textarea name="content" form="create">Enter text here...</textarea>

@@ -1,12 +1,21 @@
-import re
-from urllib import request
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.http import HttpResponseRedirect
+
 from landing.models import Post
+
+
+def base(request):
+    return render(request, "base.html")
+
+def duobary(request):
+    return render (request, "landing/duobary.html")
 
 def detail(request):
     return render(request, "landing/detail.html")
+
+def landing_index(request):
+    return render(request, "landing/landing_index.html")
 
 def landing_post_create(request):
     if request.method == "GET":
@@ -15,8 +24,10 @@ def landing_post_create(request):
         new_post = Post()
         new_post.title = request.POST["title"]
         new_post.content = request.POST["content"]
+        if request.FILES.get("image"):
+            new_post.head_image = request.FILES["image"]
         new_post.save()
-        return HttpResponseRedirect("/landing/create/")
+        return HttpResponseRedirect(reverse("landing:create"))
 
 def landing_home(request):
     post_list = Post.objects.all().order_by("-pk")
@@ -60,3 +71,24 @@ def landing_post_collect(request):
         new_post.read_book = request.POST["read_book"]
         new_post.save()
         return HttpResponseRedirect("/landing/detail/")
+
+def landing_test(request):
+    context = {
+		"weather_data": {
+			"weather": "흐림",
+			"temperature": "3",
+	},
+    "top_average": [  # Dictionary로 이루어진 List 입니다.
+        {
+            "name": "이정후",
+            "average": 0.347
+        }, {
+            "name": "강백호",
+            "average": 0.347,
+        }, {
+            "name": "전준우",
+            "average": 0.347
+        }
+		]
+}
+    return render(request, "landing/test.html", context)

@@ -8,6 +8,11 @@
 </head>
 <body>
     <h2>{{ post.title }}</h2>
+    {% if post.head_image %}
+    <div style="width: 600px;">
+        <img src="{{ post.head_image.url }}" alt="Post Head Image" style="width: 100%;">
+    </div>
+    {% endif %}
     <p>{{ post.content }}</p>
     <a href="/landing/post-update/{{ post.id }}/">update</a>&nbsp;
     <a href="/landing/post-delete/{{ post.id }}/">delete</a>

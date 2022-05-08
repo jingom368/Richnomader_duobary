@@ -1,0 +1,19 @@
+<body>
+    <div id="header">
+        {% block header %}
+        <p>
+            <span class="link"><a href="/">Home</a></span>
+            <span class="link"><a href="{% url 'landing:home' %}">Blog</a></span>
+            <span class="link"><a href="/shopping/">Shop</a></span>
+            <span class="link"><a href="/local-shops/shops-near-me">Find Shops</a></span>
+        </p>
+        {% endblock %}
+        {% block app_header %}
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        <h1>Hello Template Inheritance!</h1>
+        {% endblock %}
+    </div>
+</body>

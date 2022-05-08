@@ -12,7 +12,10 @@
     <ol>
         {% for post in post_list %}
         <li><a href="/landing/post-read/{{ post.id }}/">{{ post.title }}</a></li>
+        {% empty %}
+        <li style="font-weight: bold; font-size: 20px; list-style: none;">No Posts</li>
         {% endfor %}
+        <p>Total Posts: {{ post_list|length }}</p>
     </ol>
     <ul>
         {% for post in post_list %}

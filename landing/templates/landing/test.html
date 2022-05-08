@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    오늘의 날씨는 {{ weather_data.weather }}이며, 온도는 섭씨 {{ weather_data.temperature }}도 입니다.
+    <p>타율 1위: {{ top_average.0.name }}, {{ top_average.0.average }}</p>
+    <p>타율 2위: {{ top_average.1.name }}, {{ top_average.1.average }}</p>
+    <p>타율 3위: {{ top_average.2.name }}, {{ top_average.2.average }}</p>
+    <p>
+        오늘의 기온은
+        {% if not weather_data.temperature %}
+        알 수 없습니다.
+        {% elif weather_data.temperature < 10 %}
+        {{ weather_data.temperature }}도 이며, 매우 춥습니다.
+        {% elif weather_data.temperature > 30 %}
+        {{ weather_data.temperature }}도 이며, 매우 덥습니다.
+        {% else %}
+        {{ weather_data.temperature }}도 이며, 매우 애매합니다.
+        {% endif %}
+    </p>
+</body>
+</html>

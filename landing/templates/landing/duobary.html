@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'landing/css/duobary.css' %}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo center">
+            <img src="" />
+            책 만남
+        </div>
+        <a class="nav center" href="https://www.naver.com">
+            <div class="nav_text">사전 신청하러 가기</div>
+            <img style="display: block;" src="/static/landing/assets/img/1.header/arrow.png"/>
+        </a>
+    </header>
+
+    <main>
+        <div class="top-banner">
+            <img class="top-banner__image_1" src="/static/landing/assets/img/2.main/top-banner_picture.png" />
+            <img class="top-banner__image_2" src="/static/landing/assets/img/2.main/top-banner_line.png" />
+            <div class= "top-banner__text-box">
+                <div class="top-banner__title">내가 좋아하는 책을 </br> 읽는 사람들과의 만남</div>
+                <div class="top-banner__text">책을 좋아하는 사람들의 온라인 북클럽</div>
+            </div>
+        </div>
+    
+        <section id="function">
+            <div class="grid-1fr">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <div class="section__text-box">
+                                <div class="section__title">나의 도서 취향</div>
+                                <div class="section__text">
+                                        내가 좋아하는 책 장르를 선
+                                    </br>택하고, 작가와 도서를 나만
+                                    </br>의 서재에 등록할 수 있어요
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <img class="section__image" src="" />
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-5">                        
+                            <img class="section__image" src="/static/landing/assets/img/2.main/Recommendation.png" />
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <div class="section__text-box">                        
+                                <div class="section__title">독서 친구 만남</div>
+                                <div class="section__text">
+                                        나와 독서 취향이 비슷한 
+                                    </br>친구들을 추천해 드려요!
+                                    </br>친구들의 서재를 보고 
+                                    </br>책에 대해서 이야기해요
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="section__text-box">
+                                <div class="section__title">도서/작가 단체 모임방</div>
+                                <div class="section__text">
+                                        내가 좋아하는 책이나 
+                                    </br>작가에 대해 함께 이야기 
+                                    </br>할 수 있는 온라인 모임에
+                                    </br>참여해보세요
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-5"> 
+                            <img class="section__image" src="/static/landing/assets/img/2.main/entrance.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="finding" class="center">
+            <div class="find__text-box">
+                <div class="section__title">새로운 친구찾기</div>
+                <div class="section__text">
+                    좋아하는 책과 작가에 대해 함께 이야기하면서
+                </br>마음이 잘 맞는 친구를 만나보세요!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="section__image" src="/static/landing/assets/img/2.main/finding.png" />
+                </div>
+                <div class="col-4">
+                    <img class="section__image" src="/static/landing/assets/img/2.main/finding.png" />
+                </div>
+                <div class="col-4">
+                    <img class="section__image" src="/static/landing/assets/img/2.main/finding.png" />
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-banner">
+            <img class="bottom-banner__image" src ="/static/landing/assets/img/2.main/bottom-banner.png" />
+            <div class="bottom-banner__content">
+                <div class="bottom-banner__logo">Read with me</div>
+                <h1 class="bottom-banner__title">내가 좋아하는 책 장르를 선택하고
+                </br>작가와 도서를 나만의 서재에 
+                </br>등록할 수 있어요</h1>
+                <div class="bottom-banner__cta-button">
+                    <h1 class="bottom-banner__text">사전 신청하러 가기!</h1>
+                </div>
+            </div>        
+        </section>
+    
+    </main>
+
+
+
+    <footer>
+        <div>
+            <div class="footer-top">
+                <div class="footer-top__logo">
+                <img src="" />
+                </div>
+    
+                <div class="footer-top__info">
+                    <div class="footer-top__info-external-link">
+                        <p class="footer__top__info__title"> External Link </p>
+
+                        <li class="external-link__wrapper">
+                            <div class="external-link__icon">           
+                                <img src="/static/landing/assets/svg/additional-social-instagram.svg" />
+                            </div>
+                            <div class="external-link__name"> Instagram </div>
+                        </li>
+
+                    </div>
+
+                    <div class="footer-top__info__contact">
+                        <p class="footer-top__info__title"> Contact </p>
+                        <div class="footer-top__info-detail">
+                        <p class="footer-text-wrapper">
+                            고객 지원      
+                            <img class="line3-image" src="/static/landing/assets/img/Line 3 (Stroke).png" />
+                            채널 톡
+                        </p>
+        
+                        <p class="footer-text-wrapper">
+                            상담 시간
+                            <img class="line3-image" src="/static/landing/assets/img/Line 3 (Stroke).png" />
+                            11:00 - 19:00 (주말, 공휴일 제외)
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="footer-bottom">
+                <div class="footer-text-wrapper semi-bold">
+                  이용약관
+                  <img class="ellipse-image" src="/static/landing/assets/img/Ellipse.png" />
+                  개인정보처리방침
+                  <img class="ellipse-image" src="/static/landing/assets/img/Ellipse.png" />
+                  환불규정
+                </div>
+      
+                <div class="footer-text-wrapper semi-bold">
+                  팀이름
+                  <img class="seperator-image" src="/static/landing/assets/img/Seperator.png" />
+                  대표자 이름
+                  <img class="seperator-image" src="/static/landing/assets/img/Seperator.png" />
+                  대표이메일
+                </div>
+              </div>
+      
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
