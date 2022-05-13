@@ -139,12 +139,42 @@
                 <h1 class="bottom-banner__title">나와 책 취향이 비슷하고 마음이 잘 맞는
                 </br>독서 친구를 <span style="color:#ff6363;">북클</span>에서 만나보세요!
                 </h1>
-                <form class="form" action="/landing/duobary/" method="post">
+                <form class="form" action="/landing/index/" method="post">
                     {% csrf_token %}
                     <input id="bottom-banner-input" name="phonenumber" placeholder="&nbsp;&nbsp;(필수) 전화번호" autocomplete="off" maxlength="13" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="000-0000-0000">
                     <input id="bottom-banner-input" name="email" placeholder="&nbsp;&nbsp;(필수) 이메일" autocomplete="off" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="BOOKCLE@email.com">                        
                 <button class="bottom-banner__cta-button" type="submit">사전 신청하기</button>
+
                 </form>
+
+                <button id="testBtn" class="btn">모달 테스트</button>
+                <!-- 회원가입 확인 Modal-->
+                  <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                      <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  </button>
+                                  <h3 class="modal-title" id="exampleModalLabel">모달테스트</h5>
+                              </div>
+                              <div class="modal-body">내용 입력 !!</div>
+                              <div class="modal-footer">
+                                  <a class="btn" id="modalY" href="#">예</a>
+                                  <button class="btn" type="button" data-dismiss="modal">아니요</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <script>
+                    $('#testBtn').click(function(e){
+                        console.log("click22");
+                        // e.preventDefault();
+                        // $('#testModal').modal("show");
+                    });
+                </script>
+                    
                 <!-- <div class="bottom-banner__cta-button">
                     <h1 class="bottom-banner__text">사전 신청하러 가기!</h1>
                 </div> -->
@@ -231,6 +261,16 @@
             </div>
         </div> -->
     </footer>
-</div>
+
+    <script>
+        // $('#on_click').click(function(e){
+        //     e.preventDefault();
+        //     $('#on_show').modal("show");
+        // });
+        $('#testBtn').click(function(e){
+			e.preventDefault();
+			$('#testModal').modal("show");
+		});
+    </script>
 </body>
 </html>

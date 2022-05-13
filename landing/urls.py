@@ -4,7 +4,7 @@ from landing import views
 
 app_name = "landing"
 urlpatterns = [
-    path("duobary/",views.landing_duobary_post_collect),
+    path("index/",views.landing_duobary_post_collect),
     # path("base/", views.base),
     # path("duobary/", views.duobary),
     # path("detail/", views.detail),

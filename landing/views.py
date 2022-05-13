@@ -6,13 +6,13 @@ from landing.models import Post
 
 def landing_duobary_post_collect(request):
     if request.method == "GET":
-        return render(request, "landing/duobary.html")
+        return render(request, "landing/index.html")
     if request.method == "POST":
         new_post = Post()
         new_post.phonenumber = request.POST["phonenumber"]
         new_post.email = request.POST["email"]
         new_post.save()
-        return HttpResponseRedirect("/landing/duobary/")
+        return HttpResponseRedirect("/landing/index/")
 
 
 # def base(request):
