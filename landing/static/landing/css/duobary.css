@@ -420,7 +420,7 @@ a:active{text-decoration: none; color:black}
 }
 
 @media (max-width: 576px) {
-    #bottom-banner-input {
+    #phonenumber {
         width: 252px;
         height: 51.12px;
         margin: 0 0 9px;
@@ -435,7 +435,37 @@ a:active{text-decoration: none; color:black}
 }
 
 @media (min-width: 576px) {
-    #bottom-banner-input {
+    #phonenumber {
+        width: 328px;
+        height: 50.88px;
+        margin: 0 0 9px;
+        padding: 8px;
+        border-radius: 7.6px;
+        border: 0.8px solid #cecece;
+        font-size: 16px;
+        line-height: 140%;
+        outline: none;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 576px) {
+    #email {
+        width: 252px;
+        height: 51.12px;
+        margin: 0 0 9px;
+        padding: 8px;
+        border-radius: 7.6px;
+        border: 0.8px solid #cecece;
+        font-size: 16px;
+        line-height: 140%;
+        outline: none;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 576px) {
+    #email {
         width: 328px;
         height: 50.88px;
         margin: 0 0 9px;

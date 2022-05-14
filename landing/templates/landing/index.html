@@ -142,12 +142,11 @@
                 </h1>
                 <form class="form" action="/landing/index/" method="post">
                     {% csrf_token %}
-                    <input id="bottom-banner-input" name="phonenumber" placeholder="&nbsp;&nbsp;(필수) 전화번호" autocomplete="off" maxlength="13" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="000-0000-0000">
-                    <input id="bottom-banner-input" name="email" placeholder="&nbsp;&nbsp;(필수) 이메일" autocomplete="off" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="BOOKCLE@email.com">                        
-                <button class="bottom-banner__cta-button" id="testBtn" type="submit">사전 신청하기</button>
-                </form>
-
-                    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <input id="phonenumber" name="phonenumber" placeholder="&nbsp;&nbsp;(필수) 전화번호" autocomplete="off" maxlength="13" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="000-0000-0000">
+                    <input id="email" name="email" placeholder="&nbsp;&nbsp;(필수) 이메일" autocomplete="off" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="BOOKCLE@email.com">
+                    <button class="bottom-banner__cta-button" id="submit" type="submit">사전 신청하기</button>
+                    
+                    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -160,18 +159,29 @@
                             </div>
                         </div>
                     </div>
-                  
-                <script>
-                    $('#testBtn').click(function(e){
-                        $('#testModal').modal("show");
-                    });
+                      
+                    <script>
+                        $(document).ready(function() {
+                            $('#submit').click(function() {
+                                if($('#phonenumber').val().length<9){alert("전화번호를 입력하세요."); $('#phonenumber').focus(); return false;}
+                                if($('#email').val().length<15){alert("이메일을 입력하세요."); $('#email').focus(); return false;}
+                            });
+                        });
 
-                    $('#close').click(function(e){
-                        console.log("click")
-                        $('#testModal').modal("hide");
-                    });
-                </script>
-                    
+                        $('#submit').click(function(e){
+                            if($('#phonenumber').val().length>=9 && $('#email').val().length>=15) {
+                                $('#Modal').modal("show");
+                            }
+                        });
+    
+                        $('#close').click(function(e){
+                            if($('#phonenumber').val().length>=9 && $('#email').val().length>=15) {
+                            $('#Modal').modal("hide");
+                            }
+                        });
+                    </script>
+                        
+                </form>
                 <!-- <div class="bottom-banner__cta-button">
                     <h1 class="bottom-banner__text">사전 신청하러 가기!</h1>
                 </div> -->
@@ -259,15 +269,5 @@
         </div> -->
     </footer>
 
-    <script>
-        // $('#on_click').click(function(e){
-        //     e.preventDefault();
-        //     $('#on_show').modal("show");
-        // });
-        $('#testBtn').click(function(e){
-			e.preventDefault();
-			$('#testModal').modal("show");
-		});
-    </script>
 </body>
 </html>
