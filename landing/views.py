@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+from django.utils import timezone
 
 from landing.models import Post
 
@@ -11,9 +12,16 @@ def landing_duobary_post_collect(request):
         new_post = Post()
         new_post.phonenumber = request.POST["phonenumber"]
         new_post.email = request.POST["email"]
+        new_post.created_at = timezone.now()
         new_post.save()
         return HttpResponseRedirect("/landing/index/")
 
+def landing_home(request):
+    post_list = Post.objects.all().order_by("-pk")
+    context = {
+        "post_list": post_list
+    }
+    return render(request, "landing/read.html", context)
 
 # def base(request):
 #     return render(request, "base.html")

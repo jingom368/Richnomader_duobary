@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bookclub Apply List</h1>
+
+    <table border="1">
+        <th>전화번호</th>
+        <th>이메일</th>
+        <th>보낸 시간</th>
+        {% for post in post_list %}
+        <tr>
+            <td>{{ post.phonenumber }}</td>
+            <td>{{ post.email }}</td>
+            <td>{{ post.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
